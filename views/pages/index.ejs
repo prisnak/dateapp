@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body>
+    <header>
+        <% include ../partials/header %>
+    </header>
+        <% include ../partials/create-date-button %>
+        <% include ../partials/image %>
+    <div>
+        <div>
+            <h3 class="subtitle">How much are you trying to spend?</h3>
+        </div>
+        <div>
+            <form method="GET" action='/result'>
+                <div class="custom-select">
+                    <select id='amount' name="price" required>
+                        <option value="select-answer">Select Price Range</option>
+                        <option value="$">I want to be cheap.</option>
+                        <option value="$$">Willing to spend a little</option>
+                        <option value="$$$">Lets go all out! I found the one</option>
+                    </select>
+                </div>
+                
+                <a id="index-button" type="submit" value="Submit" class="button">
+                    <span>Let's find out</span>
+                </a>
+            </form>
+        </div>    
+    </div>
+    <% include ../partials/script-jax %>  
+</body>
+</html>

@@ -1,0 +1,30 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- <script src="/assets/javascript/jax.js"></script> -->
+<script>
+    var amount;
+    $('#amount').on('change', function () {
+        console.log("sjdflkjsdf")
+        amount = $("option:selected", this).val();
+        console.log(amount);
+        $('#index-button').attr('href', '/result/' + amount)
+    });
+    var category;
+    $('#categories').on('change', function () {
+            category = $("option:selected", this).val();
+            console.log(category);
+            // $('#result-button').attr('href', '/result/' + price + '/' + category);
+        })
+
+    $(document).on('click', '#result-button', function(){
+        price = window.location.href.split('result/')[1];
+        console.log(price);
+        $('#result-button').attr('href', '/result/' + price + '/' + category);
+    })
+    $(document).on('click','#create-button', function(){
+        $('#create-button').attr('href', '/date-form')
+    });
+   
+
+    
+        
+</script>  

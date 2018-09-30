@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body>
+    <header>
+        <% include ../partials/header %>
+
+    </header>
+    <% include ../partials/create-date-button %>
+    <% include ../partials/image %>
+    <div>
+        <div>
+            <div class='subtitle'>
+                <h3>We were thinking..</h3>
+                <a target="_blank" href='<%=link %>'>
+                    <h3 id='answer'><%= result %> !</h3>
+                </a>
+            </div>
+            <div id=underP>
+                <p><%= des %></p>
+            </div>   
+        </div>
+        <div class="custom-select">
+            <form>
+                <select id='categories'>
+                    <option value="select-answer">Not your style? Pick a category</option>
+                    <option value="art_ent">I want to be entertained.</option>
+                    <option value="active">Prefer to do something outdoorsy/active.</option>
+                    <option value="food_bev">Food and Drinks. I like those</option>
+                </select>
+                <div>
+                    <a id="result-button" type="submit" value="Submit" class="button">
+                        <span>Let's find out</span>
+                    </a>
+                    <!-- <a action="/results/$/:" method="GET" class="button">
+                    <!- <a class="button"> -->
+                        <!-- <span>Lets try again!</span>
+                    </a> -->
+                </div>
+            </form>
+              
+        </div>    
+       
+    </div>    
+    <% include ../partials/script-jax %>
+</body>
+</html>

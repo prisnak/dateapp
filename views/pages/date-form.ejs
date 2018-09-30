@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body>
+    <header>
+        <% include ../partials/header %>
+    </header>
+    <h1>Share a Date Idea!</h1>
+    <div class="message-container"></div>
+    <form method="POST" action="/date-form/take-in-post-info" class="form-submit">
+        <br>
+        <div class="activity-container">
+            <label for="activity-input">Give Your Date a Title!</label>
+            <br>
+            <input type="text" id="activity-input" placeholder="i.e. 'Ride Bikes Through the Park!'" name="activity" required>
+        </div>
+        <br>
+        <div class="price-container">
+            <label for="price-select">Select Price Range</label>
+            <br>
+            <select id="price-select" name="price">
+                <option value="" hidden>Select Price Range</option>
+                <option value="$">$ (Low)</option>
+                <option value="$$">$$ (Medium)</option>
+                <option value="$$$">$$$ (High)</option>
+            </select>
+        </div>
+        <br>
+        <div class="category-container">
+            <label for="category-select">Choose a Category for Your Date</label>
+            <br>
+            <select id="category-select" name="category">
+                <option value="" hidden>Choose a Category for Your Date</option>
+                <option value="active">Active (i.e. Indoor & Outdoor activities)</option>
+                <option value="art_ent">Arts & Entertainment (i.e. Concerts & Museums)</option>
+                <option value="food_bev">Food & Drinks (i.e. Bars & Restaurants)</option>
+            </select>
+        </div>
+        <br>
+        <div class="description-container">
+            <label for="description-input">Give a Brief Description of your Date</label>
+            <br>
+            <textarea id="description-input" placeholder="255 max. characters" rows="3" name="description" required></textarea>
+        </div>
+        <div class="link-container">
+            <label for="link-input">Add a Link if it Helps!</label>
+            <br>
+            <input type="text" id="link-input" placeholder="i.e. A Yelp Link to the Business or A Google Maps Link to the Location" name="web_link">
+        </div>
+        <div class="submit-container">
+            <button id="submit-input" type="submit">Share!</button>
+        </div>
+        </div>
+        <br>
+    </form>
+
+
+</body>
+
+</html>

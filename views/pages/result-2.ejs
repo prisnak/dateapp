@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body>
+    <header>
+        <% include ../partials/header %>
+    </header>
+        <% include ../partials/create-date-button %>
+        <% include ../partials/image %>
+    <div>
+        <div>
+            <div class='subtitle'>
+                <h3>How about..</h3>
+                <a target="_blank" href='<%=link %>'>
+                    <h3 id='answer'><%= result %> !</h3>
+                </a>
+            </div>
+        </div>
+        <div id=underP>
+            <p><%= des %></p>
+        </div>
+        <div>
+            <a href="/" class="button">
+                <span>Don't like? Lets start over!</span>
+            </a>
+        </div>   
+    </div>    
+    <% include ../partials/script-jax %>
+</body>
+</html>

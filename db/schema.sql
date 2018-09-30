@@ -1,0 +1,13 @@
+CREATE DATABASE res_db;
+
+USE res_db;
+
+CREATE TABLE ideas (
+	id INT NOT NULL AUTO_INCREMENT,
+	price VARCHAR (255) NOT NULL,
+	activity VARCHAR (255) NOT NULL,
+	category VARCHAR (255) NOT NULL,
+    description VARCHAR (255) NOT NULL,
+	web_link VARCHAR (255) NULL DEFAULT '',
+	PRIMARY KEY (id)
+);
